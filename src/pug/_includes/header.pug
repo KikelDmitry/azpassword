@@ -1,0 +1,39 @@
+-
+	var menu = [
+		{
+			title: 'Генератор паролей',
+			link: '#',
+		},
+		{
+			title: 'Украли пароль?',
+			link: '#',
+		},
+		{
+			title: 'Скачать AZPassword',
+			link: '#',
+		},
+		{
+			title: 'Справка',
+			link: '#',
+		},
+		{
+			title: 'Контакты',
+			link: '#',
+		},
+	];
+
+header.header
+	.container
+		.row
+			.col.col-md-3
+				.header__logo
+					img(src="/img/logo.svg", alt="azpassword logo")
+			.col-auto.col-md-9
+				nav.header__menu.header-menu
+					ul.header-menu__list
+						each item in menu
+							li.header-menu__item
+								a.header-menu__link(href=item.link)
+									span.header-menu__title #{item.title}
+			.col-1.d-md-none
+				.header__burger

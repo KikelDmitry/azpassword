@@ -1,0 +1,125 @@
+// variables
+
+//mixins
+//desktop first
+@mixin df($size) {
+	@media (max-width: $size + px) {
+		@content;
+	}
+}
+//mobile first
+@mixin mf($size) {
+	@media (min-width: $size + px) {
+		@content;
+	}
+}
+
+/* Color styles */
+$color-black: #222222;
+$color-white: #FFFFFF;
+$color-gray-0: #2F2F2F;
+$color-gray-1: #434343;
+$color-gray-2: #555555;
+$color-gray-3: #686868;
+$color-gray-4: #767676;
+$color-gray-5: #8A8A8A;
+$color-gray-6: #9F9F9F;
+$color-gray-7: #BBBBBB;
+$color-gray-8: #D6D6D6;
+$color-gray-9: #EEEEEE;
+$color-blue-0: #1A3965;
+$color-blue-1: #244D89;
+$color-blue-2: #295AA0;
+$color-blue-3: #2F66B6;
+$color-blue-4: #3470C7;
+$color-blue-5: #5286D2;
+$color-blue-6: #719CDA;
+$color-blue-7: #99B8E4;
+$color-blue-8: #C1D3EE;
+$color-blue-9: #E6EEF8;
+$color-cyan-0: #084553;
+$color-cyan-1: #0B5E71;
+$color-cyan-2: #0D6E84;
+$color-cyan-3: #0F7D96;
+$color-cyan-4: #1089A4;
+$color-cyan-5: #339BB3;
+$color-cyan-6: #57ADC0;
+$color-cyan-7: #87C4D2;
+$color-cyan-8: #B6DBE3;
+$color-cyan-9: #E2F1F4;
+$color-blue-deep-0: #0E1F37;
+$color-blue-deep-1: #162F54;
+$color-blue-deep-2: #244F8C;
+$color-blue-deep-3: #326DC2;
+$color-blue-deep-4: #4080DD;
+$color-blue-deep-5: #4587E7;
+$color-blue-deep-6: #679EEC;
+$color-blue-deep-7: #91B8F2;
+$color-blue-deep-8: #B9D2F6;
+$color-blue-deep-9: #E6EFFC;
+$color-cyan-deep-0: #04262D;
+$color-cyan-deep-1: #073945;
+$color-cyan-deep-2: #0B6073;
+$color-cyan-deep-3: #10859F;
+$color-cyan-deep-4: #1A9AB7;
+$color-cyan-deep-5: #1EA3C1;
+$color-cyan-deep-6: #47B4CC;
+$color-cyan-deep-7: #79C9DA;
+$color-cyan-deep-8: #AADCE7;
+$color-cyan-deep-9: #E0F2F6;
+$color-cyan-dull-0: #0F1F35;
+$color-blue-dull-0: #0F1F35;
+$color-blue-dull-1: #1E2E44;
+$color-blue-dull-2: #3B4B61;
+$color-blue-dull-3: #57677D;
+$color-blue-dull-4: #69798F;
+$color-blue-dull-5: #708096;
+$color-blue-dull-6: #8898AE;
+$color-blue-dull-7: #A5B5CB;
+$color-blue-dull-8: #C1D1E7;
+$color-blue-dull-9: #E4EFFF;
+$color-cyan-dull-0: #06252C;
+$color-cyan-dull-1: #15343B;
+$color-cyan-dull-2: #325158;
+$color-cyan-dull-3: #4E6D74;
+$color-cyan-dull-4: #607F86;
+$color-cyan-dull-5: #67868D;
+$color-cyan-dull-6: #7F9EA5;
+$color-cyan-dull-7: #9CBBC2;
+$color-cyan-dull-8: #B8D7DE;
+$color-cyan-dull-9: #D7F6FD;
+$color-steel-0: #3C5056;
+$color-steel-1: #596D77;
+$color-steel-2: #688190;
+$color-steel-3: #7B95A4;
+$color-steel-4: #98B0B8;
+$color-steel-5: #BFD1D6;
+$color-steel-6: #D0E0E4;
+$color-steel-7: #E1EEF1;
+$color-steel-8: #EBF5F7;
+$color-steel-9: #F1F8FA;
+$grad-blue-hover: #3F61C6;
+$grad-blue-hover2: #AFC0F2;
+$color-green-5: #2BAB6E;
+$color-green-6: #43C386;
+$color-green-7: #60E0A3;
+$color-green-8: #7CFCBF;
+$color-green-9: #CDFFE7;
+$color-red-5: #E85252;
+$color-red-6: #FF6A6A;
+$color-red-7: #FF9393;
+$color-red-8: #FFBABA;
+$color-red-9: #FFE6E6;
+$grad-steel-light: #EFF8FA;
+$warn-red: #3470C7;
+$warn-cyan: #3470C7;
+$grad-red: #FF6464;
+$grad-cyan: #79C9DA;
+
+/* Effect styles */
+$shadow-md:  10px 0px 5px rgba(75, 129, 146, 0.15);
+$shadow-black-md:  10px 0px 5px rgba(0, 0, 0, 0.1);
+$shadow:  15px 0px 4px rgba(0, 0, 0, 0.2);
+$shadow-sm:  5px 0px 3px rgba(75, 129, 146, 0.25);
+$glow-cyan:  25px 0px 4px rgba(132, 232, 255, 0.33);
+$glow-red:  25px 0px 4px rgba(255, 138, 138, 0.33);
