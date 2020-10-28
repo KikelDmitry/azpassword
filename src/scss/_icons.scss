@@ -1,0 +1,156 @@
+@font-face {
+	font-family: "icons";
+	src: url($font-path + "icons.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: "icons" !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-burger::before {
+	content: "\e900";
+	color: #2c57c4;
+}
+.icon-caret-down::before {
+	content: "\e901";
+	color: #2c57c4;
+}
+.icon-caret-left::before {
+	content: "\e902";
+	color: #2c57c4;
+}
+.icon-check::before {
+	content: "\e903";
+	color: #2c57c4;
+}
+.icon-chevron-left::before {
+	content: "\e904";
+	color: #2c57c5;
+}
+.icon-chevron-right::before {
+	content: "\e905";
+	color: #2c57c5;
+}
+.icon-copyright::before {
+	content: "\e906";
+	color: #2c57c5;
+}
+.icon-copy::before {
+	content: "\e907";
+	color: #2c57c4;
+}
+.icon-eye::before {
+	content: "\e908";
+	color: #2c57c4;
+}
+.icon-download::before {
+	content: "\e909";
+	color: #2c57c5;
+}
+.icon-stack::before {
+	content: "\e90a";
+	color: #2c57c4;
+}
+.icon-key::before {
+	content: "\e90b";
+	color: #2c57c4;
+}
+.icon-profile::before {
+	content: "\e90c";
+	color: #2c57c4;
+}
+.icon-pass::before {
+	content: "\e90d";
+	color: #2c57c4;
+}
+.icon-safe::before {
+	content: "\e90e";
+	color: #2c57c4;
+}
+.icon-safety::before {
+	content: "\e90f";
+	color: #2c57c4;
+}
+.icon-hierarchy::before {
+	content: "\e910";
+	color: #2c57c4;
+}
+.icon-facebook::before {
+	content: "\e911";
+	color: #2c57c4;
+}
+.icon-odnoklassniki::before {
+	content: "\e912";
+	color: #2c57c4;
+}
+.icon-vkontakte::before {
+	content: "\e913";
+	color: #2c57c4;
+}
+.icon-plus-solid::before {
+	content: "\e914";
+	color: #2c57c4;
+}
+.icon-minus::before {
+	content: "\e915";
+	color: #2c57c4;
+}
+.icon-plus::before {
+	content: "\e916";
+	color: #2c57c4;
+}
+.icon-question::before {
+	content: "\e917";
+	color: #2c57c4;
+}
+.icon-server-3::before {
+	content: "\e918";
+	color: #2c57c4;
+}
+.icon-share::before {
+	content: "\e919";
+	color: #2c57c4;
+}
+.icon-close::before {
+	content: "\e91a";
+	color: #2c57c4;
+}
+.icon-shield::before {
+	content: "\e91c";
+	color: #2c57c4;
+}
+.icon-asterisk::before {
+	content: "\e91d";
+	color: #2c57c4;
+}
+.icon-user::before {
+	content: "\e91e";
+	color: #2c57c4;
+}
+.icon-gift::before {
+	content: "\e91f";
+	color: #2c57c4;
+}
+.icon-input::before {
+	content: "\e920";
+	color: #2c57c4;
+}
+.icon-server-1::before {
+	content: "\e921";
+	color: #2c57c4;
+}

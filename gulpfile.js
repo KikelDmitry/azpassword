@@ -57,7 +57,8 @@ const server = () => {
 	browserSync.init({
 		server: {
 			baseDir: config.dest
-		}
+		},
+		notify: false
 	})
 };
 
