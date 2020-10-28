@@ -1,8 +1,13 @@
 body {
+	display: flex;
+	flex-direction: column;
 	min-height: 100vh;
 	background: $color-white;
 	color: $color-black;
 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 	font-weight: normal;
 	font-size: 16px;
+}
+.action-btn {
+	
 }

@@ -117,9 +117,9 @@ $grad-red: #FF6464;
 $grad-cyan: #79C9DA;
 
 /* Effect styles */
-$shadow-md:  10px 0px 5px rgba(75, 129, 146, 0.15);
-$shadow-black-md:  10px 0px 5px rgba(0, 0, 0, 0.1);
-$shadow:  15px 0px 4px rgba(0, 0, 0, 0.2);
-$shadow-sm:  5px 0px 3px rgba(75, 129, 146, 0.25);
-$glow-cyan:  25px 0px 4px rgba(132, 232, 255, 0.33);
-$glow-red:  25px 0px 4px rgba(255, 138, 138, 0.33);
+$shadow-md: 0px 5px 10px rgba(75, 129, 146, 0.15);
+$shadow-black-md: 0px 5px 10px rgba(0, 0, 0, 0.1);
+$shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+$shadow-sm: 0px 3px 5px rgba(75, 129, 146, 0.25);
+$glow-cyan: 0px 4px 25px rgba(132, 232, 255, 0.33);
+$glow-red: 0px 4px 25px rgba(255, 138, 138, 0.33);

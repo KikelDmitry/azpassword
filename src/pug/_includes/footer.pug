@@ -1,0 +1,71 @@
+-
+	var footer = {
+		menu: [
+			{
+				title: 'Топ 7 менеджеров паролей',
+				link: '#',
+			},
+			{
+				title: 'Скачать AZPassword',
+				link: '#',
+			},
+			{
+				title: 'Справка',
+				link: '#',
+			},
+			{
+				title: 'Как удалить',
+				link: '#',
+			},
+			{
+				title: 'Контакты',
+				link: '#',
+			},
+			{
+				title: 'Партнерам',
+				link: '#',
+			},
+		],
+		links: [
+			{
+				title: 'Лицензионное соглашение',
+				link: '#',
+			},
+			{
+				title: 'Правила и условия использования',
+				link: '#',
+			},
+			{
+				title: 'Политика конфиденциальности',
+				link: '#',
+			},
+		]
+	};
+-
+	var footerLinks
+
+footer.footer
+	.footer__top
+		.container
+			.row
+				.col-12.col-md-3
+					.footer-copy
+						i.icon-copyright
+						| AZPassword
+						span 2020
+
+				.col-12.col-md-9
+					nav.footer-menu
+						ul.footer-menu__list
+							each item in footer.menu
+								li.footer-menu__item
+									a.footer-menu__link(href=item.link) #{item.title}
+	.footer__bottom
+		.container
+			.row
+				.col-12.col-md-9.offset-md-3.col-lg-12.offset-lg-0
+					nav.footer-links
+						each item in footer.links
+							a.footer-links__item(href=item.link) #{item.title}
+
+				
