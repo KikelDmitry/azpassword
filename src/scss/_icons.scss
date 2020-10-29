@@ -22,8 +22,17 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-info::before {
+	content: "\e922";
+}
+.icon-shield-1::before {
+	content: "\e923";
+}
+.icon-scan::before {
+	content: "\e924";
+}
 .icon-arrow-down:before {
-  content: "\e91b";
+	content: "\e91b";
 }
 .icon-burger::before {
 	content: "\e900";

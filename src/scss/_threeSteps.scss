@@ -1,8 +1,16 @@
 .three-steps {
 	padding: 14px 0 24px;
+	margin-bottom: 1px;
 	background-image: linear-gradient(268.25deg, rgba(60, 86, 161, 0) 0%, #3666ae 100%);
 	background-color: #1b93ae;
 	color: $color-white;
+
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 15px;
+	}
+	@include media-breakpoint-up(xl) {
+		margin-bottom: 30px;
+	}
 
 	&__title {
 		display: flex;
@@ -19,7 +27,6 @@
 				font-size: 34px;
 			}
 			@include media-breakpoint-up(xl) {
-				padding-top: 5px;
 				margin-right: 12px;
 				align-self: flex-start;
 				font-size: 42px;
