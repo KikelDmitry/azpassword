@@ -35,7 +35,32 @@
 			meter.classList.add('is-warning')
 		} else if (length == 3) {
 			meter.classList.add('is-safe')
-			
+
+		}
+	})
+}
+{
+	// pass length
+	let counter = document.querySelector('.pass-length'),
+		input = counter.querySelector('.pass-length__input'),
+		incr = counter.querySelector('[name="incr"]'),
+		decr = counter.querySelector('[name="decr"]');
+
+	counter.addEventListener('click', function (e) {
+		if (e.target == incr) {
+			input.value++
+
+			if (input.value >= 16) {
+				incr.disabled = true
+			}
+			decr.disabled = false
+		} else if (e.target == decr) {
+			input.value--
+
+			if (input.value <= 1) {
+				decr.disabled = true
+			}
+			incr.disabled = false
 		}
 	})
 }
