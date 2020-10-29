@@ -1,5 +1,4 @@
 // BS
-// full
 @import "~bootstrap/scss/bootstrap.scss";
 
 @import "_variables.scss";
@@ -8,10 +7,13 @@
 @import "_icons.scss";
 
 // BASE
-
 @import "_common.scss";
 @import "_header.scss";
 @import "_footer.scss";
+
+// HOME
+@import "_threeSteps.scss";
+
 
 
 // @import "_debug.scss";

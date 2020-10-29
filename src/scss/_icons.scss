@@ -22,6 +22,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-arrow-down:before {
+  content: "\e91b";
+}
 .icon-burger::before {
 	content: "\e900";
 }
