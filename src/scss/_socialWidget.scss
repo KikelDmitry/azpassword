@@ -1,0 +1,76 @@
+.social-widget {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 10px 0 5px;
+	
+	@include media-breakpoint-up(sm) {
+		justify-content: flex-start;
+		padding: 15px 0;
+		flex-direction: row;
+	}
+	@include media-breakpoint-up(md) {
+		padding: 10px 0;
+	}
+	@include media-breakpoint-up(lg) {
+		padding: 20px 0 15px;
+	}
+	@include media-breakpoint-up(xl) {
+		padding: 20px 0 25px;
+	}
+	&__list {
+		display: flex;
+		margin-bottom: 5px;
+
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+		color: $color-white;
+		border-radius: 5px;
+		font-size: 14px;
+		
+		@include media-breakpoint-up(lg) {
+			width: 32px;
+			height: 32px;
+			font-size: 18px;
+		}
+		&--vkontakte {
+			background-color: $color-vk;
+		}
+		&--facebook {
+			background-color: $color-fb;
+		}
+		&--odnoklassniki {
+			background-color: $color-ok;
+		}
+		&:hover {
+			color: $color-white;
+			text-decoration: none;
+		}
+	}
+	&__descr {
+		color: $color-steel-2;
+		font-size: 13px;
+		line-height: 24px;
+		
+		@include media-breakpoint-up(sm) {
+			margin-left: 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 15px;
+		}
+	}
+}

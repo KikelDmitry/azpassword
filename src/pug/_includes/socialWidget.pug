@@ -1,1 +1,26 @@
+-
+	var socials = [
+		{
+			title: 'vk',
+			icon: 'vkontakte',	
+			link: '#',		
+		},
+		{
+			title: 'Facebook',
+			icon: 'facebook',			
+			link: '#',		
+		},
+		{
+			title: 'Одноклассники',
+			icon: 'odnoklassniki',			
+			link: '#',		
+		},
+	]
+
 .social-widget
+	ul.social-widget__list
+		each item in socials
+			li.social-widget__item
+				a.social-widget__link(href=item.link class="social-widget__link--" + item.icon)
+					i(class="icon-" + item.icon)
+	.social-widget__descr Расскажите друзьям про безопасность
