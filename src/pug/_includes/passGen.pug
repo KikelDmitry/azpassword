@@ -1,35 +1,38 @@
 .pass-gen
-	h2.pass-gen__head.header-2 Генератор паролей
-	.pass-gen__body
-		.pass-gen__input-row
-			input.pass-gen__input(type="text" readonly)
-			button.pass-gen__copy(type="button")
-				i.icon-copy
-		.pass-control
-			.pass-control__icon
-				i.icon-shield
-			.pass-control__length
-				.option-title Длина
-				.pass-length
-					button.pass-length__btn(type="button" name="decr")
-						i.icon-minus
-					input.pass-length__input(type="text" name="length" readonly value=8)
-					button.pass-length__btn(type="button" name="incr")
-						i.icon-plus
-			.pass-control__safety
-				.option-title Надежность
-				.pass-control__safety-meter
-					.pass-control__safety-bar
-			.pass-control__options
-				label.pass-control__label
-					input.pass-control__input(type="checkbox" name="nums")
-					span.pass-control__title.option-title Цифры
-					span.pass-control__check
-						i.icon-check
-				label.pass-control__label
-					input.pass-control__input(type="checkbox" name="symbls")
-					span.pass-control__title.option-title Спец. символы
-					span.pass-control__check
-						i.icon-check
-			button.pass-control__generate(type="button") Генерировать
-
+	.pass-gen__head.pass-gen__head--mob
+		.container
+			h2.pass-gen__head.pass-gen__head--desc.header-2 Генератор паролей
+	.pass-gen__body.pass-gen__body--mob
+		.container
+			.pass-gen__body.pass-gen__body--desc
+				.pass-gen__input-row
+					input.pass-gen__input(type="text" readonly)
+					button.pass-gen__copy(type="button")
+						i.icon-copy
+				.pass-control
+					.pass-control__icon
+						i.icon-shield
+					.pass-control__length
+						.option-title Длина
+						.pass-length
+							button.pass-length__btn(type="button" name="decr")
+								i.icon-minus
+							input.pass-length__input(type="text" name="length" readonly value=8)
+							button.pass-length__btn(type="button" name="incr")
+								i.icon-plus
+					.pass-control__safety
+						.option-title Надежность
+						.pass-control__safety-meter
+							.pass-control__safety-bar
+					.pass-control__options
+						label.pass-control__label
+							input.pass-control__input(type="checkbox" name="nums")
+							span.pass-control__title.option-title Цифры
+							span.pass-control__check
+								i.icon-check
+						label.pass-control__label
+							input.pass-control__input(type="checkbox" name="symbls")
+							span.pass-control__title.option-title Спец. символы
+							span.pass-control__check
+								i.icon-check
+					button.pass-control__generate(type="button") Генерировать

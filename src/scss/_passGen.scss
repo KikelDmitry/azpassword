@@ -5,10 +5,45 @@
 		display: flex;
 		align-items: center;
 		min-height: 40px;
-		padding-left: 30px;
 		background-color: $color-steel-6;
-		border-radius: 5px 5px 0 0;
 		color: $color-steel-0;
+		
+		&--desc {
+			flex: 1 1 auto;
+
+			@include media-breakpoint-up(lg) {
+				border-radius: 5px 5px 0 0;
+				padding-left: 30px;
+			}
+		}
+		&--mob {
+			@include media-breakpoint-up(lg) {
+				background-color: transparent;
+			}
+			@include media-breakpoint-up(xl) {
+				position: relative;
+			}
+			&::after {
+				@include media-breakpoint-up(xl) {
+					content: "или";
+					position: absolute;
+					bottom: 0;
+					right: 0;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 50px;
+					height: 30px;
+					background-color: $color-cyan-deep-6;
+					color: $color-white;
+					border-radius: 5px;
+					text-align: center;
+					font-size: 22px;
+					font-weight: 500;
+					line-height: 1;
+				}
+			}
+		}
 
 		@include media-breakpoint-up(sm) {
 			min-height: 50px;
@@ -16,34 +51,31 @@
 		@include media-breakpoint-up(lg) {
 			min-height: 55px;
 		}
-		&::after {
-			@include media-breakpoint-up(xl) {
-				content: "или";
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				flex: 0 0 auto;
-				width: 50px;
-				height: 30px;
-				align-self: flex-end;
-				margin-left: auto;
-				margin-right: -15px;
-				background-color: $color-cyan-deep-6;
-				color: $color-white;
-				border-radius: 5px;
-				text-align: center;
-				font-size: 22px;
-				font-weight: 500;
-				line-height: 1;
+	}
+	&__body {
+		background-color: $color-steel-7;
+		
+		&--desc {
+			padding: 20px 0 30px;
+
+			@include media-breakpoint-up(lg) {
+				padding: 20px 30px 30px;
+			}
+		}
+		&--mob {
+			@include media-breakpoint-up(lg) {
+				padding: 0;
+				background-color: transparent;
 			}
 		}
 	}
-	&__body {
-		padding: 20px 30px 30px;
-		background-color: $color-steel-7;
-	}
 	&__input-row {
 		display: flex;
+		margin-bottom: 6px;
+
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 10px;
+		}
 	}
 	&__input {
 		flex: 1 1 auto;
@@ -108,7 +140,7 @@
 		grid-template-columns: auto 1fr;
 	}
 	@include media-breakpoint-up(md) {
-		grid-template-columns: auto 1fr 1fr;
+		grid-template-columns: auto 1fr auto;
 	}
 
 	&__icon {
@@ -128,6 +160,14 @@
 			border-radius: 5px;
 			font-size: 60px;
 		}
+		@include media-breakpoint-up(lg) {
+			width: 120px;
+			height: 120px;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 90px;
+			height: 90px;
+		}
 	}
 	&__length {
 		grid-column: 1/2;
@@ -135,6 +175,7 @@
 
 		@include media-breakpoint-up(md) {
 			grid-column: 2/3;
+			justify-self: end;
 		}
 	}
 	.pass-length {
@@ -180,14 +221,13 @@
 				border-radius: 0 5px 5px 0;
 			}
 			&:disabled {
-				color: $color-steel-6;
-				background-color: $color-steel-7;
+				opacity: 0.3;
 			}
 			&:active {
 				background-color: $color-steel-5;
 			}
 			&:focus {
-				outline: 0
+				outline: 0;
 			}
 		}
 		&__input {
@@ -209,12 +249,23 @@
 		grid-column: 1/2;
 		grid-row: 2/3;
 
+		width: 100%;
+		
 		@include media-breakpoint-up(sm) {
 			grid-column: 2/3;
 			grid-row: 1/2;
+
+			width: 330px;
 		}
 		@include media-breakpoint-up(md) {
 			grid-column: 3/4;
+			width: 270px;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 340px;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 235px;
 		}
 
 		&-meter {
@@ -270,6 +321,9 @@
 
 			padding-left: 0;
 		}
+		@include media-breakpoint-up(lg) {
+			justify-self: end;
+		}
 	}
 	&__label {
 		display: flex;
@@ -317,6 +371,7 @@
 		transition-duration: 200ms;
 
 		&:hover {
+			background-color: lighten($color-steel-6, 3%);
 			cursor: pointer;
 		}
 		i {
@@ -346,6 +401,15 @@
 		@include media-breakpoint-up(md) {
 			grid-column: 3/4;
 			grid-row: 2/3;
+		}
+		&:hover {
+			background-color: $color-cyan-deep-6;
+		}
+		&:active {
+			background-color: $color-cyan-deep-4;
+		}
+		&:focus {
+			outline: 0;
 		}
 	}
 	.option-title {

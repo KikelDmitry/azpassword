@@ -27,7 +27,7 @@
 	btn.addEventListener('click', function () {
 		output.value = randNum(1, 120)
 		let length = output.value.length
-		meter.style.transform = `scaleX(${length * 0.333})`
+		meter.style.transform = `scaleX(${length * 0.3333})`
 		meter.classList.remove('is-danger', 'is-warning', 'is-safe')
 		if (length == 1) {
 			meter.classList.add('is-danger')

@@ -9,6 +9,7 @@
 		margin-bottom: 15px;
 	}
 	@include media-breakpoint-up(xl) {
+		padding: 40px 0;
 		margin-bottom: 30px;
 	}
 
@@ -28,6 +29,7 @@
 			}
 			@include media-breakpoint-up(xl) {
 				margin-right: 12px;
+				padding-left: 18px;
 				align-self: flex-start;
 				font-size: 42px;
 			}
