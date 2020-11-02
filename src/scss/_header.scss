@@ -10,6 +10,10 @@
 		justify-content: flex-start;
 		align-items: center;
 
+		&:hover {
+			text-decoration: none;
+		}
+
 		&-logo {
 			display: none;
 

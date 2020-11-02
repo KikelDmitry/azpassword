@@ -17,32 +17,34 @@
 {
 	//passgen
 	let btn = document.querySelector('.pass-control__generate'),
-		output = document.querySelector('.pass-gen__input'),
-		meter = document.querySelector('.pass-control__safety-bar');
-	const randNum = (min, max) => {
-		min = Math.ceil(min);
-		max = Math.floor(max);
-		return Math.floor(Math.random() * (max - min + 1)) + min;
-	}
-	btn.addEventListener('click', function () {
-		output.value = randNum(1, 120)
-		let length = output.value.length
-		meter.style.transform = `scaleX(${length * 0.3333})`
-		meter.classList.remove('is-danger', 'is-warning', 'is-safe')
-		if (length == 1) {
-			meter.classList.add('is-danger')
-		} else if (length == 2) {
-			meter.classList.add('is-warning')
-		} else if (length == 3) {
-			meter.classList.add('is-safe')
-
+		output = document.querySelector('.pass-gen__output input'),
+		meter = document.querySelector('.pass-control__safety .progress-bar');
+	if(btn !== null) {
+		const randNum = (min, max) => {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min + 1)) + min;
 		}
-	})
+		btn.addEventListener('click', function () {
+			output.value = randNum(1, 120)
+			let length = output.value.length
+			meter.style.width = `${length * 33.333}%`
+			meter.classList.remove('bg-danger', 'bg-warning', 'bg-success')
+			if (length == 1) {
+				meter.classList.add('bg-danger')
+			} else if (length == 2) {
+				meter.classList.add('bg-warning')
+			} else if (length == 3) {
+				meter.classList.add('bg-success')
+	
+			}
+		})
+	}
 }
 {
 	// pass length
-	let counter = document.querySelector('.pass-length'),
-		input = counter.querySelector('.pass-length__input'),
+	let counter = document.querySelector('.pass-control__length'),
+		input = counter.querySelector('input'),
 		incr = counter.querySelector('[name="incr"]'),
 		decr = counter.querySelector('[name="decr"]');
 

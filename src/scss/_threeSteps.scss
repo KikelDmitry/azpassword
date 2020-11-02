@@ -92,6 +92,10 @@
 		@include media-breakpoint-up(md) {
 			min-height: 90px;
 		}
+		&:hover {
+			color: $color-white;
+			text-decoration: none;
+		}
 	}
 	&__icon {
 		display: flex;
@@ -146,6 +150,5 @@
 			border-radius: 5px;
 			transform: rotateZ(-90deg);
 		}
-
 	}
 }

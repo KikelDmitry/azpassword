@@ -26,11 +26,19 @@ header.header
 	.container
 		.row
 			.col.col-lg-3
-				.header__title
-					img.header__title-logo(src="/img/logo.svg", alt="azpassword logo")
-					.header__title-name
-						span az
-						| password
+				if config.page.title == 'Главная'
+					.header__title
+						img.header__title-logo(src="/img/logo.svg", alt="azpassword logo")
+						.header__title-name
+							span az
+							| password
+				else
+					a.header__title(href="/")
+						img.header__title-logo(src="/img/logo.svg", alt="azpassword logo")
+						.header__title-name
+							span az
+							| password
+
 			.col-auto.col-lg-9
 				nav.header__menu.header-menu
 					ul.header-menu__list
