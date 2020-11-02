@@ -192,6 +192,7 @@
 			margin-bottom: 0;
 			display: flex;
 			flex-wrap: nowrap;
+			overflow: hidden;
 
 			@include media-breakpoint-up(sm) {
 				height: 40px;
@@ -205,6 +206,17 @@
 			}
 			@include media-breakpoint-up(xl) {
 				max-width: 214px;
+			}
+
+			.input-group-prepend {
+				button {
+					border-radius: 5px 0 0 5px;
+				}
+			}
+			.input-group-append {
+				button {
+					border-radius: 0 5px 5px 0;
+				}
 			}
 
 			button {
@@ -223,12 +235,6 @@
 				}
 				i {
 					pointer-events: none;
-				}
-				&:first-of-type {
-					border-radius: 5px 0 0 5px;
-				}
-				&:last-of-type {
-					border-radius: 0 5px 5px 0;
 				}
 				&:disabled {
 					opacity: 0.3;
