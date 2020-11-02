@@ -8,19 +8,22 @@
 				.pass-gen__output
 					.input-group
 						input(type="text" readonly)
-						button.input-group-append(type="button")
-							i.icon-copy
+						.input-group-append
+							button(type="button")
+								i.icon-copy
 				.pass-control
 					.pass-control__icon
 						i.icon-shield
 					.pass-control__length
 						.option-title Длина
 						.input-group
-							button.input-group-prepend(type="button" name="decr")
-								i.icon-minus
+							.input-group-prepend
+								button(type="button" name="decr")
+									i.icon-minus
 							input(type="text" name="length" readonly value=8)
-							button.input-group-append(type="button" name="incr")
-								i.icon-plus
+							.input-group-append
+								button(type="button" name="incr")
+									i.icon-plus
 					.pass-control__safety
 						.option-title Надежность
 						.progress
