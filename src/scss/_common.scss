@@ -8,15 +8,84 @@ body {
 	font-weight: normal;
 	font-size: 16px;
 }
+.main {
+	&__header {
+		padding-top: 6px;
+		background-color: $color-steel-9;
+		color: $color-steel-0;
+
+		@include media-breakpoint-up(sm) {
+			padding-top: 12px;
+		}
+		@include media-breakpoint-up(md) {
+			padding-top: 8px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding-top: 16px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding-top: 12px;
+		}
+	}
+	&__title {
+		display: inline-block;
+		padding: 8px 12px;
+		background-color: $color-white;
+		border-radius: 5px 5px 0 0;
+
+		@include media-breakpoint-up(md) {
+			padding: 10px 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 12px 20px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 16px 30px;
+		}
+	}
+	&__inner {
+		padding: 8px 12px;
+		color: $color-steel-0;
+
+		@include media-breakpoint-up(md) {
+			padding: 10px 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 12px 20px;
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 16px 30px;
+		}
+
+		.header-2 {
+			color: $color-blue-3;
+			margin-bottom: 0.6em;
+		}
+	}
+}
 .header-1 {
-	font-size: 25px;
-	line-height: 29px;
+	font-size: 17px;
 	font-weight: 900;
+	line-height: 100%;
+
+	@include media-breakpoint-up(sm) {
+		line-height: 110%;
+		font-size: 18px;
+	}
+	@include media-breakpoint-up(md) {
+		font-size: 20px;
+	}
+	@include media-breakpoint-up(md) {
+		font-size: 22px;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 25px;
+	}
 }
 .header-2 {
 	font-size: 17px;
-	line-height: 110%;
 	font-weight: 700;
+	line-height: 110%;
 
 	@include media-breakpoint-up(sm) {
 		font-size: 20px;
@@ -50,7 +119,8 @@ body {
 			background: linear-gradient(180deg, #3f8ddf 0%, #30519f 100%), $grad-blue-hover2;
 		}
 		span {
-			background: linear-gradient(180deg, rgba(83, 209, 245, 0.5) 0%, rgba(241, 248, 250, 0) 100%), $grad-blue-hover;
+			background: linear-gradient(180deg, rgba(83, 209, 245, 0.5) 0%, rgba(241, 248, 250, 0) 100%),
+				$grad-blue-hover;
 		}
 	}
 	&:active {
@@ -67,7 +137,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: linear-gradient(180deg, #3877ba 0%, #30519f 100%),  #37519e;
+		background: linear-gradient(180deg, #3877ba 0%, #30519f 100%), #37519e;
 		font-size: 22px;
 
 		@include media-breakpoint-up(sm) {

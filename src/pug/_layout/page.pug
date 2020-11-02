@@ -3,3 +3,13 @@ extends /_layout/base.pug
 block meta
 	- config.page.title = 'Title';
 	- config.page.description = 'Description';
+
+block layout
+	main.main
+		.main__header
+			.container
+				h1.main__title.header-1 #{config.page.title}
+		.main__body
+			.container
+				.main__inner
+					block content

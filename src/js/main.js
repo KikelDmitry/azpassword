@@ -48,26 +48,29 @@
 }
 {
 	// pass length
-	let counter = document.querySelector('.pass-control__length'),
-		input = counter.querySelector('input'),
-		incr = counter.querySelector('[name="incr"]'),
-		decr = counter.querySelector('[name="decr"]');
+	let counter = document.querySelector('.pass-control__length');
 
-	counter.addEventListener('click', function (e) {
-		if (e.target == incr) {
-			input.value++
-
-			if (input.value >= 16) {
-				incr.disabled = true
+	if(counter !== null) {
+		let input = counter.querySelector('input'),
+			incr = counter.querySelector('[name="incr"]'),
+			decr = counter.querySelector('[name="decr"]');
+			
+		counter.addEventListener('click', function (e) {
+			if (e.target == incr) {
+				input.value++
+	
+				if (input.value >= 16) {
+					incr.disabled = true
+				}
+				decr.disabled = false
+			} else if (e.target == decr) {
+				input.value--
+	
+				if (input.value <= 1) {
+					decr.disabled = true
+				}
+				incr.disabled = false
 			}
-			decr.disabled = false
-		} else if (e.target == decr) {
-			input.value--
-
-			if (input.value <= 1) {
-				decr.disabled = true
-			}
-			incr.disabled = false
-		}
-	})
+		})
+	}
 }
