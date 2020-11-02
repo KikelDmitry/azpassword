@@ -18,7 +18,8 @@
 	//passgen
 	let btn = document.querySelector('.pass-control__generate'),
 		output = document.querySelector('.pass-gen__output input'),
-		meter = document.querySelector('.pass-control__safety .progress-bar');
+		meter = document.querySelector('.pass-control__safety .progress-bar'),
+		icon = document.querySelector('.pass-control__icon');
 	if(btn !== null) {
 		const randNum = (min, max) => {
 			min = Math.ceil(min);
@@ -30,13 +31,17 @@
 			let length = output.value.length
 			meter.style.width = `${length * 33.333}%`
 			meter.classList.remove('bg-danger', 'bg-warning', 'bg-success')
+			icon.classList.remove('bg-danger', 'bg-warning', 'bg-success')
 			if (length == 1) {
+				
 				meter.classList.add('bg-danger')
+				icon.classList.add('bg-danger')
 			} else if (length == 2) {
 				meter.classList.add('bg-warning')
+				icon.classList.add('bg-warning')
 			} else if (length == 3) {
 				meter.classList.add('bg-success')
-	
+				icon.classList.add('bg-success')
 			}
 		})
 	}
