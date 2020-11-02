@@ -318,11 +318,9 @@
 		@include media-breakpoint-up(md) {
 			grid-column: 2/3;
 			grid-row: 2/3;
+			justify-self: end;
 
 			padding-left: 0;
-		}
-		@include media-breakpoint-up(lg) {
-			justify-self: end;
 		}
 	}
 	&__label {
