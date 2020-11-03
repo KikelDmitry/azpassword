@@ -74,3 +74,16 @@
 		})
 	}
 }
+{
+	// owl carousel
+	$(document).ready(function () {
+		$(".owl-carousel").owlCarousel({
+			items: 1,
+			nav: true,
+			navText: [
+				'<i class="icon-chevron-left"></i>',
+				'<i class="icon-chevron-right"></i>',
+			]
+		});
+	});
+}
