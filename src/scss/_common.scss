@@ -3,7 +3,7 @@ body {
 	flex-direction: column;
 	min-height: 100vh;
 	background: $color-white;
-	color: $color-black;
+	color: $color-steel-0;
 	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
 	font-weight: normal;
 	font-size: 16px;
@@ -25,25 +25,6 @@ body {
 		}
 		@include media-breakpoint-up(xl) {
 			padding-top: 12px;
-		}
-	}
-	&__inner {
-		padding: 8px 12px;
-		color: $color-steel-0;
-
-		@include media-breakpoint-up(md) {
-			padding: 10px 15px;
-		}
-		@include media-breakpoint-up(lg) {
-			padding: 12px 20px;
-		}
-		@include media-breakpoint-up(xl) {
-			padding: 16px 30px;
-		}
-
-		.header-2 {
-			color: $color-blue-3;
-			margin-bottom: 0.6em;
 		}
 	}
 	&__title {
@@ -120,7 +101,7 @@ body {
 		}
 		span {
 			background: linear-gradient(180deg, rgba(83, 209, 245, 0.5) 0%, rgba(241, 248, 250, 0) 100%),
-				$grad-blue-hover;
+			$grad-blue-hover;
 		}
 	}
 	&:active {
@@ -134,12 +115,13 @@ body {
 	i {
 		flex: 0 0 auto;
 		width: 50px;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		background: linear-gradient(180deg, #3877ba 0%, #30519f 100%), #37519e;
 		font-size: 22px;
-
+		
 		@include media-breakpoint-up(sm) {
 			width: 72px;
 			font-size: 27px;
@@ -151,6 +133,7 @@ body {
 	}
 	span {
 		flex: 1 1 auto;
+		height: 100%;
 		display: flex;
 		justify-content: flex-start;
 		align-items: center;

@@ -1,0 +1,29 @@
+extends /_layout/page.pug
+
+block meta
+	- config.page.title = 'Проверка на скомпрометированность';
+	- config.page.description = 'Description';
+
+block content
+	section.check-pass-section
+		.container
+			.row
+				.col-12.col-lg-6
+					form.check-pass-section__form.check-pass-form
+						.check-pass-form__header.header-2 Введите логин или пароль
+						.check-pass-form__body
+							input.check-pass-form__input(type="text" name="pass")
+							button.check-pass-form__submit.action-btn(type="submit") 
+								i.icon-scan
+								span Проверить
+				.col-12.col-lg-6
+					.check-pass-section__descr
+						.check-pass-section__descr-title.header-2 Узнайте, попадал ли когда-либо Ваш пароль или логин в руки злоумышленников
+						.check-pass-section__descr-content
+							p Нажмите кнопку «Проверить» и бесплатно узнайте, попадал ли когда-либо ваш логин или парол в руки злоумышленников в результате утечек учетных данных через уязвимости сайтов и сервисов, на которых вы зарегистрированы.
+							p Благодаря сервису 
+								a(href="https://haveibeenpwned.com") haveibeenpwned.com
+								|  мы знаем о факте утечек учетных данных 
+								b 10 199 352 448
+								|  аккаунтов. Эта проверка безопасна, так как мы используем только часть шифра, полученного путем кодирования символов введенного вами пароля. И никуда не передаем шифр целиком и тем более пароль в открытом виде.
+						
