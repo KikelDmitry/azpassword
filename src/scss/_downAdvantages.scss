@@ -1,0 +1,67 @@
+.down-advantages {
+	padding: 20px 0;
+	margin-top: auto;
+	color: $color-steel-0;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 51.56%, #FFFFFF 100%), $grad-steel-light;
+
+	@include media-breakpoint-up(sm) {
+		padding: 30px 0;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+
+		@include media-breakpoint-up(sm) {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		@include media-breakpoint-up(md) {
+			margin-bottom: 25px;
+		}
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 26px;
+			align-items: flex-start;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 10px;
+			align-items: center;
+		}
+
+		i {
+			flex: 0 0 auto;
+			width: 32px;
+			height: 32px;
+			margin-right: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $color-cyan-deep-6;
+			color: $color-white;
+			border-radius: 5px;
+			font-size: 16px;
+
+			@include media-breakpoint-up(lg) {
+				width: 48px;
+				height: 48px;
+				font-size: 24px;
+			}
+		}
+		span {
+			font-size: 13px;
+			line-height: 100%;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 15px;
+			}
+		}
+	}
+}

@@ -1,4 +1,40 @@
+-
+	var adv = [
+		{
+			text: 'Сразу после запуска готов криптостойкий пароль',
+			icon: 'safe',
+		},
+		{
+			text: 'Генерируйте любое количество паролей с любыми символами',
+			icon: 'stack',
+		},
+		{
+			text: 'Создание пароля встроенными алгоритмами шифрования',
+			icon: 'safety',
+		},
+		{
+			text: 'Зашифруйте любую фразу и пользуйтесь ей как паролем',
+			icon: 'key',
+		},
+		{
+			text: 'Одновременная генерация до пятидесяти тридцатизначных паролей',
+			icon: 'hierarchy',
+		},
+		{
+			text: 'Это абсолютно бесплатно',
+			icon: 'gift',
+		},
+	]
+
 section.down-advantages
 	.container
-		h2.down-promo__title Теперь сгенерировать надёжный пароль просто, как никогда!
-		.down-promo__body
+		.row
+			.col-12
+				h2.down-advantages__title.header-2 Теперь сгенерировать надёжный пароль просто, как никогда!
+			.col-12
+				.row
+					each item in adv
+						.col-12.col-sm-6.col-md-4
+							.down-advantages__item
+								i(class="icon-" + item.icon)
+								span #{item.text}

@@ -1,13 +1,17 @@
 // BS
 @import "~bootstrap/scss/bootstrap.scss";
 
+// OWL CAROUSEL
+@import "owl/owl.carousel.scss";
+
+// COMMON
 @import "_variables.scss";
 @import "_fonts.scss";
 @import "_resets.scss";
 @import "_icons.scss";
-
-// BASE
 @import "_common.scss";
+
+// LAYOUT
 @import "_header.scss";
 @import "_footer.scss";
 
@@ -21,7 +25,9 @@
 @import "_privacy.scss";
 
 // DOWNLOAD PAGE
-@import "_downPromo.scss";
+@import "_downAdvantages.scss";
+@import "_dlBlockCarousel.scss";
+
 
 
 // @import "_debug.scss";
