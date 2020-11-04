@@ -1,0 +1,47 @@
+.pass-state {
+	&__item {
+		min-height: 265px;
+		background-color: $color-blue-3;
+		
+		@include media-breakpoint-up(lg) {
+			background-repeat: no-repeat;
+			background-position: left top;
+			background-color: $color-steel-9;
+			background-image: linear-gradient(to bottom, $color-blue-3, $color-blue-3);
+			background-size: calc(50% - 15px) 100%;
+		}
+		&--compr {
+
+		}
+	}
+	&__left {
+		padding: 25px 0;
+		position: relative;
+		color: $color-white;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 0;
+			border: 14px solid transparent;
+			border-top-color: $color-white;
+		}
+	}
+	&__title {
+		font-size: 18px;
+		font-weight: bold;
+
+		@include media-breakpoint-up(md) {
+			font-size: 20px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 22px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 25px;
+		}
+	}
+}

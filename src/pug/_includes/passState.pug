@@ -1,0 +1,48 @@
+-
+	var passStates = [
+		{
+			type: 'pass',
+			compr: true,
+			title: 'Внимание! Этот пароль был скомпрометирован 65536 раз!',
+			icon: '',
+			descr: 'Настоятельно рекомендуем вам нигде не использовать этот пароль. Если вы используете его – смените его на новый на всех ресурсах, где он используется. Бесплатно сгенерировать криптостойкий пароль можно с помощью AZPassword.',
+			action: {
+				title: 'Что теперь делать?',
+				steps: [
+					'Не поддаваться панике и поменять пароль на всех ресурсах, где вы его используете.',
+					'Для надежного хранения паролей используйте один из <a href="#">Топ 7</a> менеджер паролей.',
+					'Используйте <a href="#">генератор паролей</a> для создания криптостойких паролей.',
+				],
+			},
+
+		},
+	];
+-
+	var leakSrc = [
+		'000webhost',
+		'500px',
+		'8tracks',
+		'Acne.org',
+		'Adobe',
+		'Aipai.com',
+		'AnimeGame',
+		'Animoto',
+		'Apollo',
+		'Appen',
+		'Aptoide',
+		'Armor Games',
+		'Army Force Online',
+		'Artsy',
+		'Artvalue',
+		'Atlas Quantum',
+	]
+
+section.pass-state
+	.pass-state__item.pass-state__item--compr
+		.container
+			.row
+				.col-12.col-md-6
+					.pass-state__left
+						.pass-state__title Внимание! Этот пароль был скомпрометирован 65536 раз!
+				.col-12.col-md-6
+					.pass-state__right
