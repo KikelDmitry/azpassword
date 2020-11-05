@@ -1,0 +1,189 @@
+-
+	var managers = [
+		{
+			title: 'manager0',
+			email: 'check',
+			pass: 'check',
+			baseSize: 'full',
+			web: 'check',
+			notReg: 'check',
+			rus: 'close',
+			free: 'check',
+			result: 'check',
+			desktop: 'close',
+		},
+		{
+			title: 'manager1',
+			email: 'check',
+			pass: 'close',
+			baseSize: 'full',
+			web: 'check',
+			notReg: 'check',
+			rus: 'check',
+			free: 'check',
+			result: 'check',
+			desktop: 'close',
+		},
+		{
+			title: 'manager2',
+			email: 'close',
+			pass: 'check',
+			baseSize: 'close',
+			web: 'check',
+			notReg: 'check',
+			rus: 'check',
+			free: 'check',
+			result: 'check',
+			desktop: 'close',
+		},
+		{
+			title: 'manager3',
+			email: 'check',
+			pass: 'check',
+			baseSize: 'full',
+			web: 'check',
+			notReg: 'close',
+			rus: 'close',
+			free: 'close',
+			result: 'check',
+			desktop: 'close',
+		},
+		{
+			title: 'manager4',
+			email: 'close',
+			pass: 'check',
+			baseSize: 'unknown',
+			web: 'close',
+			notReg: 'check',
+			rus: 'check',
+			free: 'check',
+			result: 'check',
+			desktop: 'close',
+		},
+		{
+			title: 'manager5',
+			email: 'check',
+			pass: 'close',
+			baseSize: 'third',
+			web: 'check',
+			notReg: 'close',
+			rus: 'close',
+			free: 'close',
+			result: 'close',
+			desktop: 'close',
+		},
+		{
+			title: 'manager6',
+			email: 'check',
+			pass: 'close',
+			baseSize: 'close',
+			web: 'check',
+			notReg: 'close',
+			rus: 'close',
+			free: 'close',
+			result: 'close',
+			desktop: 'check',
+		},
+	]
+
+section.compare-section
+	.container-lg
+		//- .compare-table
+			.compare-table__left
+				.compare-table__col.compare-table__col--heading
+					.compare-table__cell.compare-table__cell--title Сравнение менеджеров паролей
+					.compare-table__cell.compare-table__cell--title Проверка E-mail
+					.compare-table__cell.compare-table__cell--title Проверка пароля
+					.compare-table__cell.compare-table__cell--title Размер базы учетных данных
+					.compare-table__cell.compare-table__cell--title Наличие web-версии
+					.compare-table__cell.compare-table__cell--title Не нужна регистрация
+					.compare-table__cell.compare-table__cell--title Русифицирован
+					.compare-table__cell.compare-table__cell--title Доступен полностью бесплатно
+					.compare-table__cell.compare-table__cell--title Результат проверки доступен сразу
+					.compare-table__cell.compare-table__cell--title Наличие десктопной версии
+			.compare-table__right
+				each manager in managers
+
+					.compare-table__col.compare-table__col--body
+						.compare-table__cell
+							img.compare-table__logo(src="/img/content/managers/" + manager.title + ".png" alt=manager.title)
+
+						.compare-table__cell
+							i(class="icon-" + manager.email)
+
+						.compare-table__cell
+							i(class="icon-" + manager.pass)
+
+						.compare-table__cell
+							i(class="icon-" + manager.baseSize)
+						
+						.compare-table__cell
+							i(class="icon-" + manager.web)
+						
+						.compare-table__cell
+							i(class="icon-" + manager.notReg)
+						
+						.compare-table__cell
+							i(class="icon-" + manager.rus)
+
+						.compare-table__cell
+							i(class="icon-" + manager.free)
+
+						.compare-table__cell
+							i(class="icon-" + manager.result)
+
+						.compare-table__cell
+							i(class="icon-" + manager.desktop)
+		
+		table.compare-table
+			thead
+				tr.compare-table__row
+					th.compare-table__cell Сравнение менеджеров паролей
+						each manager in managers
+							td.compare-table__cell
+								img.compare-table__logo(src="/img/content/managers/" + manager.title + ".png" alt=manager.title)
+			tbody
+				tr.compare-table__row
+					th.compare-table__cell Проверка E-mail
+						each item in managers
+							td.compare-table__cell #{item.email}
+
+				tr.compare-table__row
+					th.compare-table__cell Проверка пароля
+						each item in managers
+							td.compare-table__cell #{item.pass}
+
+				tr.compare-table__row
+					th.compare-table__cell Размер базы учетных данных
+						each item in managers
+							td.compare-table__cell #{item.baseSize}
+
+				tr.compare-table__row
+					th.compare-table__cell Наличие web-версии
+						each item in managers
+							td.compare-table__cell #{item.web}
+
+				tr.compare-table__row
+					th.compare-table__cell Не нужна регистрация
+						each item in managers
+							td.compare-table__cell #{item.notReg}
+
+				tr.compare-table__row
+					th.compare-table__cell Русифицирован
+						each item in managers
+							td.compare-table__cell #{item.rus}
+					
+				tr.compare-table__row
+					th.compare-table__cell Доступен полностью бесплатно
+						each item in managers
+							td.compare-table__cell #{item.free}
+
+				tr.compare-table__row
+					th.compare-table__cell Результат проверки доступен сразу
+						each item in managers
+							td.compare-table__cell #{item.result}
+
+				tr.compare-table__row
+					th.compare-table__cell Наличие десктопной версии
+						each item in managers
+							td.compare-table__cell #{item.desktop}

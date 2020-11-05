@@ -1,0 +1,22 @@
+.compare-table {
+	width: 100%;
+
+	&__logo {
+		width: 30px;
+		height: 30px;
+		margin: auto;
+		border-radius: 5px;
+	}
+	th.compare-table__cell {
+		width: 200px;
+		position: absolute;
+		height: 40px
+	}
+	td.compare-table__cell {
+		height: 40px;
+		
+		&:first-of-type() {
+			padding-left: 200px;
+		}
+	}
+}
