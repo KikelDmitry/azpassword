@@ -2,6 +2,7 @@
 	padding: 30px 0;
 
 	&__form {
+		position: relative;
 		margin-bottom: 15px;
 
 		@include media-breakpoint-up(sm) {
@@ -9,6 +10,27 @@
 		}
 		@include media-breakpoint-up(md) {
 			margin-bottom: 15px;
+		}
+		@include media-breakpoint-up(lg) {
+			margin-bottom: 0;
+		}
+		&.is-loading {
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(225, 238, 241, 0.7);
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64px' height='64px' viewBox='0 0 128 128'%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='none' /%3E%3Cg%3E%3Cpath d='M105.54 39.9l13.56-6.42s-9.67-26.82-47.05-30.1C31.68-.1 15.25 35.6 15.25 35.6S31.13 9.55 63.6 11.1c32.6 1.53 41.96 28.8 41.96 28.8zm-41.6 72.52l-1.2 14.97s28.15 5.04 49.67-25.7c23.3-33.2.46-65.34.46-65.34s14.7 26.8-2.86 54.13c-17.66 27.5-46.05 21.9-46.05 21.9zm-42.06-72.3L9.52 31.58S-8.96 53.4 6.9 87.42c17.12 36.73 56.38 33.03 56.38 33.03s-30.56-.68-45.46-29.55c-14.96-29 4.06-50.8 4.06-50.8z' fill='%233c5056' fill-opacity='1'/%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 63.9 64.2' to='120 63.9 64.2' dur='500ms' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/g%3E%3C/svg%3E");;
+				border-radius: 5px;
+			}
+		}
+		.form-group {
+			margin-bottom: 0;
 		}
 	}
 	&__descr {
@@ -39,7 +61,7 @@
 			a {
 				color: $color-cyan-4;
 				text-decoration: underline;
-				
+
 				&:hover {
 					color: $color-cyan-4;
 					text-decoration: none;
@@ -71,20 +93,24 @@
 	}
 	&__body {
 		padding: 15px 20px 25px;
+		// margin-bottom: 15px;
 		background-color: $color-steel-7;
 		border-radius: 0 0 5px 5px;
 
 		@include media-breakpoint-up(sm) {
 			display: flex;
 			padding-bottom: 22px;
+			// margin-bottom: 20px;
 		}
 		@include media-breakpoint-up(md) {
 			padding-top: 20px;
 			padding-bottom: 30px;
+			// margin-bottom: 15px;
 		}
 		@include media-breakpoint-up(lg) {
 			display: block;
 			padding: 30px 30px 40px;
+			// margin-bottom: 0;
 		}
 	}
 	&__input {
@@ -123,7 +149,7 @@
 		height: 48px;
 		margin: 0 auto;
 		margin-top: 15px;
-		
+
 		@include media-breakpoint-up(sm) {
 			flex: 1 1 50%;
 			max-width: 320px;

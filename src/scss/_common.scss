@@ -85,6 +85,7 @@ body {
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: $shadow;
+	transition: filter 300ms;
 
 	@include media-breakpoint-up(sm) {
 		height: 72px;
@@ -92,7 +93,7 @@ body {
 	@include media-breakpoint-up(lg) {
 		height: 90px;
 	}
-	&:hover {
+	&:not(:disabled):hover {
 		color: $color-white;
 		text-decoration: none;
 
@@ -104,13 +105,17 @@ body {
 			$grad-blue-hover;
 		}
 	}
-	&:active {
+	&:not(:disabled):active {
 		i {
 			background: #2a448e;
 		}
 		span {
 			background: #36599e;
 		}
+	}
+	&:disabled {
+		filter: grayscale(.8);
+		cursor: not-allowed;
 	}
 	i {
 		flex: 0 0 auto;
