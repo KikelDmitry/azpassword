@@ -87,108 +87,83 @@
 	]
 
 section.compare-section
-	.container-lg
-		.comp-table
-			.comp-table__row.comp-table__row--heading
-				.comp-table__cell.comp-table__cell--fixed Сравнение менеджеров паролей
-				each manager in managers
-					.comp-table__cell
-						img.comp-table__logo(src="/img/content/managers/" + manager.title + ".png" alt=manager.title)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Проверка E-mail
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.email)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Проверка пароля
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.pass)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Размер базы учетных данных
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.baseSize)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Наличие web-версии
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.web)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Не нужна регистрация
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.web)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Русифицирован
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.rus)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Доступен полностью бесплатно
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.rus)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Результат проверки доступен сразу
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.rus)
-			.comp-table__row
-				.comp-table__cell.comp-table__cell--fixed Наличие десктопной версии
-				each manager in managers
-					.comp-table__cell
-						i(class="icon-" + manager.rus)
-
-		//- table.compare-table
-			thead
-				tr.compare-table__row
-					th.compare-table__cell Сравнение менеджеров паролей
+	.container-lg.p-0
+		.table-wrapper.table-responsive-md
+			table.compare-table.table
+				thead
+					tr
+						th Сравнение менеджеров паролей
 						each manager in managers
-							td.compare-table__cell
-								img.compare-table__logo(src="/img/content/managers/" + manager.title + ".png" alt=manager.title)
-			tbody
-				tr.compare-table__row
-					th.compare-table__cell Проверка E-mail
+							td
+								.compare-table__logo
+									img.compare-table__logo-img(src="/img/content/managers/" + manager.title + ".png" alt=manager.title)
+				tbody
+					tr
+						th
+							span Проверка E-mail
 						each item in managers
-							td.compare-table__cell #{item.email}
+							td
+								i(class="icon-" + item.email)
 
-				tr.compare-table__row
-					th.compare-table__cell Проверка пароля
+					tr
+						th
+							span Проверка пароля
 						each item in managers
-							td.compare-table__cell #{item.pass}
+							td
+								i(class="icon-" + item.pass)
 
-				tr.compare-table__row
-					th.compare-table__cell Размер базы учетных данных
+					tr
+						th
+							span Размер базы учетных данных
 						each item in managers
-							td.compare-table__cell #{item.baseSize}
+							td
+								i(class="icon-" + item.baseSize)
 
-				tr.compare-table__row
-					th.compare-table__cell Наличие web-версии
+					tr
+						th
+							span Наличие web-версии
 						each item in managers
-							td.compare-table__cell #{item.web}
+							td
+								i(class="icon-" + item.web)
 
-				tr.compare-table__row
-					th.compare-table__cell Не нужна регистрация
+					tr
+						th
+							span.has-aster-1 Не нужна регистрация
 						each item in managers
-							td.compare-table__cell #{item.notReg}
+							td
+								i(class="icon-" + item.notReg)
 
-				tr.compare-table__row
-					th.compare-table__cell Русифицирован
+					tr
+						th
+							span Русифицирован
 						each item in managers
-							td.compare-table__cell #{item.rus}
-					
-				tr.compare-table__row
-					th.compare-table__cell Доступен полностью бесплатно
+							td
+								i(class="icon-" + item.rus)
+						
+					tr
+						th
+							span.has-aster-2 Доступен полностью бесплатно
 						each item in managers
-							td.compare-table__cell #{item.free}
+							td
+								i(class="icon-" + item.free)
 
-				tr.compare-table__row
-					th.compare-table__cell Результат проверки доступен сразу
+					tr
+						th
+							span Результат проверки доступен сразу
 						each item in managers
-							td.compare-table__cell #{item.result}
+							td
+								i(class="icon-" + item.result)
 
-				tr.compare-table__row
-					th.compare-table__cell Наличие десктопной версии
+					tr
+						th
+							span Наличие десктопной версии
 						each item in managers
-							td.compare-table__cell #{item.desktop}
+							td
+								i(class="icon-" + item.desktop)
+		.table-footnotes
+			.table-footnotes__item 
+				span *
+				| – Не нужно регистрироваться для доступности всего функционала сервиса.
+			.table-footnotes__item 
+				span **
+				| – Бесплатно доступен весь функционал сервиса.
