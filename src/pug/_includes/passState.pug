@@ -85,6 +85,38 @@ section.pass-state
 	each item in passStates
 		.pass-state__item(class="pass-state__item--" + item.type class="pass-state__item--" + item.state)
 			.pass-state__inner
+				.container
+					.row
+						.col-12.col-lg-6
+							.pass-state__result
+								h3.pass-state__title !{item.title}
+								.result-row
+									.pass-state__icon
+										if item.type == 'login'
+											i.icon-profile
+										else if item.type = 'pass'
+											i.icon-pass
+									.pass-state__descr !{item.descr}
+						.col-12.col-lg-6
+							.pass-state__actions
+								h3.pass-state__actions-title #{item.action.title}
+								ol.action-list
+									each action in item.action.steps
+										li.action-list__item !{action}
+			if item.type == 'login' && item.state == 'compr'
+				.leaks-list
+					.container
+						h4.leaks-list__title Источники утечки этого логина
+						ul.leaks-list__list
+							each leak in leakSrc
+								li.leaks-list__item #{leak}
+						button.leaks-list__more(type="button")
+							i.icon-eye
+							| Еще
+							span 65520
+							| источников
+		//- .pass-state__item(class="pass-state__item--" + item.type class="pass-state__item--" + item.state)
+			.pass-state__inner
 				.container-lg
 					.row
 						.col-12.col-lg-6
