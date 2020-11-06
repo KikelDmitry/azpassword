@@ -104,6 +104,16 @@
 					text-decoration: none;
 				}
 			}
+			ol,
+			ul {
+				list-style-position: inside;
+			}
+			ul {
+				list-style-type: disc;				
+			}
+			ol {
+				list-style-type: decimal;
+			}
 		}
 		.collapse.show ~ .card-header {
 			background-color: $color-cyan-deep-6;
