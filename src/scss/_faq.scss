@@ -95,6 +95,15 @@
 			border: 1px solid $color-steel-7;
 			border-top: 0;
 			border-radius: 0 0 5px 5px;
+
+			a {
+				color: $color-blue-3;
+				text-decoration: underline;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 		.collapse.show ~ .card-header {
 			background-color: $color-cyan-deep-6;

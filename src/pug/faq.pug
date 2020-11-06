@@ -35,7 +35,7 @@ block content
 				each item, idx in faq
 					.card
 						.card-header(id="faq-header-" + (idx + 1))
-							a(href= "#" type="button" data-target="#faq-body-" + (idx + 1) data-toggle="collapse" class=(idx > 0 ? 'collapsed' : ''))
+							a(href= "#" data-target="#faq-body-" + (idx + 1) data-toggle="collapse" class=(idx > 0 ? 'collapsed' : ''))
 								span.faq-block__icon
 									i.icon-caret-down
 								span.faq-block__title #{item.detail}
