@@ -1,0 +1,43 @@
+extends /_layout/page.pug
+
+block meta
+	- config.page.title = 'Справка';
+	- config.page.description = 'Description';
+
+block content
+
+	-
+		var faq = [
+			{
+				detail: 'Создание сложных паролей: почему это важно в современном мире',
+				summary: '<p>Брутфорс широко применялся для взлома паролей хакерами на рассвете интернет-технологий. В современных реалиях, как мы уже разобрались, этот метод не работает. Но ему на смену пришла социальная инженерия.</p><p>Это понятие не ново, однако на вооружении злоумышленников социальная инженерия появилась относительно недавно. Что же это такое и причем здесь пароли? Сухим энциклопедическим языком, социальной инженерией называется совокупность различных приемов.</p>',
+			},
+			{
+				detail: 'Вам все еще кажется, что ваш пароль надежен?',
+				summary: '<p>Брутфорс широко применялся для взлома паролей хакерами на рассвете интернет-технологий. В современных реалиях, как мы уже разобрались, этот метод не работает. Но ему на смену пришла социальная инженерия.</p><p>Это понятие не ново, однако на вооружении злоумышленников социальная инженерия появилась относительно недавно. Что же это такое и причем здесь пароли? Сухим энциклопедическим языком, социальной инженерией называется совокупность различных приемов.</p>',
+			},
+			{
+				detail: 'Как быстро взломать пароль?',
+				summary: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, perspiciatis dolorum voluptatem minus sed explicabo? Suscipit porro quas ea aliquid magni vero reiciendis quibusdam, cupiditate eligendi enim, reprehenderit necessitatibus perspiciatis quisquam autem sed eum vel! Deleniti quis molestiae nulla harum facilis. Alias nulla repellendus modi repellat illo sapiente iste, sit dolorem odit! Et, vel culpa! Eaque excepturi eligendi hic labore, facilis suscipit magnam nemo nostrum, repudiandae voluptas voluptate veniam ipsa aliquam distinctio non minima veritatis quasi possimus iste consequatur nihil. Eius quos veniam officiis illo in repellat adipisci ratione, at est eum ipsum recusandae omnis sit accusantium nam inventore corrupti. Sunt accusantium impedit, aspernatur cumque rerum sed illum ex, qui quo eum neque veniam necessitatibus amet dolore blanditiis pariatur. Itaque, atque! Harum, veniam perspiciatis? Maiores temporibus officia magnam, eveniet dicta minus culpa fugiat possimus sapiente aut quidem obcaecati, doloremque vel quod consequatur tempora? Deleniti minima beatae iusto dolorem culpa obcaecati consequatur exercitationem ipsum suscipit tenetur dicta, non autem laudantium labore quaerat accusantium aperiam incidunt vitae distinctio reprehenderit fugit veniam? Iure recusandae fugit praesentium harum quos commodi fugiat rem eos natus distinctio quo necessitatibus minima est, voluptas maiores eaque excepturi temporibus ullam perspiciatis error velit facilis, architecto illum porro. Debitis, nihil!</p>',
+			},
+			{
+				detail: 'Когда в бой вступает социальная инженерия?',
+				summary: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illo eaque distinctio, vero consequatur id quis odit reprehenderit commodi fugit iste voluptatibus accusamus cupiditate maiores inventore tempore eveniet exercitationem quos quidem? Earum nulla fuga, libero nisi quibusdam dignissimos voluptates optio praesentium, ab deleniti commodi nemo consequatur cupiditate accusantium fugiat in?</p>',
+			},
+			{
+				detail: 'Взломали один пароль — взломают и другие',
+				summary: '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat illo eaque distinctio, vero consequatur id quis odit reprehenderit commodi fugit iste voluptatibus accusamus cupiditate maiores inventore tempore eveniet exercitationem quos quidem?</p>',
+			},
+		]
+	section.faq-section
+		.container
+			.faq-block#faq-accordion
+				each item, idx in faq
+					.card
+						.card-header(id="faq-header-" + (idx + 1))
+							button(type="button" data-target="#faq-body-" + (idx + 1) data-toggle="collapse" class=(idx > 0 ? 'collapsed' : ''))
+								span.faq-block__icon
+									i.icon-caret-down
+								span.faq-block__title #{item.detail}
+						.collapse(id="faq-body-" + (idx + 1) data-parent="#faq-accordion" class=(idx == 0 ? "show" : ""))
+							.card-body !{item.summary}

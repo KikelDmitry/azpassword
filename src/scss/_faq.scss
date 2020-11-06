@@ -1,0 +1,101 @@
+.faq-section {
+	padding: 30px 0;
+}
+.faq-block {
+	.card {
+		margin-bottom: 10px;
+		border: 0;
+		overflow: hidden;
+
+		&-header {
+			min-height: 48px;
+			padding: 0;
+			border-radius: 5px 5px 0 0;
+			overflow: hidden;
+			border: 0;
+			
+			button {
+				position: relative;
+				width: 100%;
+				min-height: inherit;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				text-align: left;
+				background-color: $color-steel-9;
+				transition-property: background-color;
+				transition-duration: 300ms;
+
+				//open state
+				&:not(.collapsed) {
+					background-color: $color-cyan-deep-6;
+
+					.faq-block__icon {
+						color: $color-white;
+						background-color: $color-cyan-deep-5;
+						
+						i {
+							transform: rotateZ(180deg);
+						}
+					}
+					.faq-block__title {
+						color: $color-white;
+					}
+					&:hover {
+						background-color: $color-cyan-deep-6;
+
+						.faq-block__icon {
+							background-color: $color-cyan-deep-3;
+						}
+					}
+				}
+				&:hover {
+					background-color: $color-steel-7;
+
+					.faq-block__icon {
+						background-color: $color-steel-6;
+					}
+				}
+				&:focus {
+					outline: 0;
+				}
+				.faq-block__icon {
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					flex: 0 0 auto;
+					width: 48px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					background-color: $color-steel-7;
+					color: $color-gray-4;
+					font-size: 18px;
+					transition-property: color, background-color;
+					transition-duration: inherit;
+					
+					i {
+						transition-property: transform;
+						transition-duration: inherit;
+					}
+				}
+				.faq-block__title {
+					padding: 10px 10px 10px 60px;
+					font-size: 17px;
+					font-weight: 500;
+					transition-property: color;
+					transition-duration: inherit;
+				}
+			}
+		}
+		&-body {
+			border: 1px solid $color-steel-7;
+			border-top: 0;
+			border-radius: 0 0 5px 5px;
+		}
+		.collapse.show ~ .card-header {
+			background-color: $color-cyan-deep-6;
+		}
+	}
+}
