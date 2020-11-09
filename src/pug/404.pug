@@ -1,9 +1,17 @@
 extends /_layout/page.pug
 
 block meta
-	- config.page.title = 'Справка';
+	- config.page.title = 'Страница не найдена';
 	- config.page.description = 'Description';
 
 block layout
 	main.main.main--404
-		.not-found hello
+		.not-found
+			.not-found__text
+				.not-found__title 404
+				.not-found__subtitle Страница не найдена
+				a.not-found__link(href="/") Перейти на главную
+			.not-found__denied
+				include ../img/denied.svg
+			.not-found__pass-row
+				include ../img/pass-row.svg

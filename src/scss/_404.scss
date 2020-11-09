@@ -5,5 +5,140 @@
 	}
 }
 .not-found {
+	width: 320px;
+	height: 320px;
 	margin: auto;
+	position: relative;
+
+	@include media-breakpoint-up(md) {
+		width: 415px;
+	}
+	@include media-breakpoint-up(xl) {
+		width: 480px;
+		height: 350px;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+		width: 320px;
+		height: 100%;
+		margin: auto;
+		background-color: $color-steel-9;
+		border-radius: 50%;
+
+		@include media-breakpoint-up(xl) {
+			width: 350px;
+			height: 350px;
+		}
+	}
+	&__text {
+		position: absolute;
+		top: 100px;
+		left: 38px;
+		width: 275px;
+		margin: 0 auto;
+		color: $color-steel-2;
+
+		@include media-breakpoint-up(md) {
+			top: 134px;
+			left: 186px;
+		}
+		@include media-breakpoint-up(xl) {
+			top: 160px;
+			left: 214px;
+		}
+	}
+	&__title {
+		font-size: 72px;
+		font-weight: 300;
+		line-height: 84px;
+
+		@include media-breakpoint-up(md) {
+			font-size: 96px;
+		}
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 20px;
+			font-size: 126px;
+		}
+	}
+	&__subtitle {
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 26px;
+		margin-bottom: 5px;
+
+		@include media-breakpoint-up(xl) {
+			font-size: 20px;
+		} 
+	}
+	&__link {
+		color: $color-steel-0;
+		font-size: 14px;
+		line-height: 16px;
+		line-height: 1.6;
+
+		&:hover {
+			color: $color-steel-0;
+		}
+	}
+	&__denied svg,
+	&__pass-row svg {
+		max-width: 100%;
+		max-height: 100%;
+		overflow: visible;
+	}
+	&__denied {
+		width: 44px;
+		height: 44px;
+		position: absolute;
+		top: 55px;
+		left: 0;
+
+		@include media-breakpoint-up(md) {
+			width: 165px;
+			height: 165px;
+			left: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 185px;
+			height: 185px;
+			left: 0;
+		}
+
+		svg {
+			circle,
+			path {
+				stroke-width: 20px;
+
+				@include media-breakpoint-up(md) {
+					stroke-width: 7px;
+				}
+			}
+		}
+	}
+	&__pass-row {
+		width: 190px;
+		height: 44px;
+		position: absolute;
+		top: 55px;
+		left: 60px;
+
+		@include media-breakpoint-up(md) {
+			width: 232px;
+			height: 54px;
+			left: auto;
+			right: 0;
+		}
+		@include media-breakpoint-up(xl) {
+			width: 275px;
+			height: 64px;
+			left: auto;
+			right: 0;
+		}
+	}
 }
